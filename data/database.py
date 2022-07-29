@@ -9,6 +9,7 @@ class Database:
         host: str,
         username: str,
         password: str,
+        dbname: str
     ) -> None:
         self.host = host
         self.username = username
