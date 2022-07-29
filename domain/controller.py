@@ -3,6 +3,8 @@ Business logic should be implemented here
 """
 
 from data.database import Database
+import operator
+import functools
 
 
 class Controller:
@@ -10,10 +12,7 @@ class Controller:
         self.db = database
 
     def calculate_multiple(*numbers) -> int:
-        result = 1
-        for number in numbers:
-            result = result * number
-        return result
+        return functools.reduce(operator.mul, numbers)
 
     def calculate_sum(*numbers) -> int:
         return sum(numbers)
