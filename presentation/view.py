@@ -17,3 +17,10 @@ class View:
         """
         result = self.controller.calculate_multiple(request.data)
         return Response(result=result)
+
+    def calculate_sum(self, request: Request) -> Response:
+        """
+        Calculates sum of number
+        """
+        summation = self.controller.calculate_sum(*request.data)
+        return Response(result=summation)
