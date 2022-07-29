@@ -2,5 +2,5 @@ from typing import Dict
 
 
 class Response:
-    def __init__(self, result: Dict) -> None:
+    def __init__(self, result) -> None:
         self.result = result
